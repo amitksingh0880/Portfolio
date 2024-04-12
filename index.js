@@ -1,9 +1,19 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
+let clickCount = 0;
+
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active');
+    clickCount++;
+    if (clickCount % 2 === 1) {
+        menuIcon.classList.toggle('fa-xmark');
+        navbar.classList.toggle('active');
+        document.querySelector('.home').style.marginTop = '180px';
+    } else {
+        menuIcon.classList.toggle('fa-xmark');
+        navbar.classList.toggle('active');
+        document.querySelector('.home').style.marginTop = '0';
+    }
 };
 
 
@@ -31,7 +41,11 @@ window.onscroll = () => {
     header.classList.toggle('sticky' , window.scrollY > 100);
 
     /*remove toggle icon and navbar*/
-    menuIcon.classList.remove('fa-xmark');
+    fa-xmark.addEventListener('click' , ()=>{
+        document.querySelector('.home').style.marginTop = '0';
+        menuIcon.classList.remove('fa-xmark');
+    })
+    // document.querySelector('.home').style.marginTop = '0';
     navbar.classList.remove('active');
 }; 
 
@@ -62,3 +76,10 @@ function submitForm() {
     frm.reset();
     return false;
     }
+
+// const refreshpage=()=>{
+//     location.reload();
+// }
+// document.addEventListener('click' ,()=>{
+//          location.reload();
+// })
