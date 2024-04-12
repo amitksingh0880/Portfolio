@@ -32,13 +32,12 @@ section{
     position: flex;
     font-family:Helvetica;
     font-size: 3rem;
-    
 }
 
 .header{
     position:flex;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
@@ -51,7 +50,6 @@ section{
 .header{
         font-size: 1.5rem;
         color: var(--text-color);
-        margin-left: 4rem;
         font-weight: 700;
    }
 
@@ -61,24 +59,29 @@ section{
     color: var(--text-color);
 }
 
-.navbar{
-    font-size: 2.5rem;
+.navbar a{
+    color:rgb(49, 49, 216) ;
+    font-weight:bold;
+    font-size: 25px;
+    margin-right: 20px;
 }
 
 #home{
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
 }
 
 #service{
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
 }
 
 #about{
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
+    /* width: 100%; */
 }
 
 #menu-icon{
     font-size: 3.6rem;
+    margin-right: 25px;
     color: var(--text-color);
     display: none;
     justify-content: space-between;
@@ -113,6 +116,9 @@ span{
     width: 25vw;
     animation: floatImage 4s ease-in-out infinite;
     border-radius: 50%;
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
 }
 
 @keyframes floatImage{
@@ -433,7 +439,7 @@ span{
 
     .navbar{
         position: absolute;
-        top: 100%;
+        top: 10%;
         left: 0;
         width: 100%;
         padding: 1rem 3%;
@@ -441,6 +447,7 @@ span{
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
+        z-index: 100%;
     }
 
     .navbar.active {
@@ -451,10 +458,12 @@ span{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        color:rgb(49, 49, 216) ;
     }
 
     .home{
         flex-direction: column;
+        margin-top: 0;
     }
 
     .home-content h3{
